@@ -587,6 +587,61 @@
     <script src="assets/js/SplitText.min.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <!-- Preloader Fix Script -->
+    <script>
+    // Multiple approaches to ensure preloader is hidden after page load
+    function hidePreloader() {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.style.display = 'none';
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+            preloader.style.zIndex = '-1';
+        }
+    }
+
+    // Method 1: Standard window load event
+    window.addEventListener('load', function() {
+        setTimeout(hidePreloader, 500);
+    });
+
+    // Method 2: Document ready state check
+    document.addEventListener('DOMContentLoaded', function() {
+        if (document.readyState === 'complete') {
+            setTimeout(hidePreloader, 500);
+        }
+    });
+
+    // Method 3: Fallback timeout to ensure preloader is hidden
+    setTimeout(function() {
+        hidePreloader();
+    }, 3000);
+
+    // Method 4: Check if jQuery is loaded and use it
+    if (typeof jQuery !== 'undefined') {
+        jQuery(window).on('load', function() {
+            setTimeout(hidePreloader, 500);
+        });
+    }
+
+    // Method 5: Override main.js behavior with a more aggressive approach
+    setTimeout(function() {
+        // Wait a bit longer for main.js to execute, then force hide preloader
+        const checkAndHide = setInterval(function() {
+            const preloader = document.getElementById('preloader');
+            if (preloader && (preloader.style.display !== 'none' || preloader.style.opacity !== '0')) {
+                hidePreloader();
+                clearInterval(checkAndHide);
+            }
+        }, 100);
+        
+        // Stop checking after 10 seconds
+        setTimeout(function() {
+            clearInterval(checkAndHide);
+        }, 10000);
+    }, 1000);
+    </script>
+
     <!-- Client-side Form Validation Script -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {

@@ -2394,5 +2394,18 @@
     <script src="assets/js/SplitText.min.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <!-- Preloader Fix Script -->
+    <script>
+    // Ensure preloader is hidden after page load
+    window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 500);
+        }
+    });
+    </script>
+
 </body>
 </html>
