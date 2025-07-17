@@ -6,7 +6,7 @@ Description:
 Version: 1.0
 
 Main Font    : Outfit
-Main Color   : #1cb098
+Main Color   : #008CFF
 
 -------------------------------------
 
@@ -111,12 +111,12 @@ Sidebar heading:  20px 'Outfit', sans-serif
 	--font-heading: 'Outfit', sans-serif;
 	--fontawesome: "Font Awesome 5 Pro";
 	--black: #000000;
-	--dark: #0e2a47;
-	--dark-secondary: #033120;
-	--dark-optional: #00194C;
+	--dark: #002D72;
+	--dark-secondary: #0056B3;
+	--dark-optional: #002D72;
 	--white: #ffffff;
-	--color-primary: #1CB098;
-	--color-secondary: #05d5b3;
+	--color-primary: #008CFF;
+	--color-secondary: #4EC5F1;
 	--color-style-two: #6374ff;
 	--color-style-three: #33bfff;
 	--color-style-four: #ffe824;
@@ -666,8 +666,8 @@ p {
 }
 
 .default-padding {
-	padding-top: 120px;
-	padding-bottom: 120px;
+	padding-top: 80px;
+	
 }
 
 @media only screen and (max-width: 767px) {
@@ -3688,7 +3688,7 @@ button {
 	padding: 50px;
 	border-radius: 10px;
 	display: grid;
-	grid-template-columns: 1fr 2.2fr;
+	grid-template-columns: 1fr;
 	gap: 50px;
 	align-items: center;
 	box-shadow: 0px 15px 60px -10px rgb(109 117 143 / 33%);
@@ -3698,8 +3698,8 @@ button {
 
 .card-style-one > img {
 	position: absolute;
-	left: 100%;
-	bottom: 100%;
+	left: 95%;
+	bottom: 99%;
 	height: 100px;
 	z-index: -1;
 }
@@ -12416,6 +12416,7 @@ button.mfp-arrow.mfp-prevent-close::after {
 	background-size: 10%;
 	background-repeat: no-repeat;
 	background-position: left bottom;
+	margin-bottom: 60px;
 }
 
 .question-card {
