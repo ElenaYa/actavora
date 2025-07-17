@@ -102,7 +102,7 @@ Sidebar heading:  20px 'Outfit', sans-serif
 
 */
 
-@import url('../../../../css2');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 
 /* Varialbes */
@@ -18187,7 +18187,7 @@ footer.dark-optional .footer-bottom p {
 	content: "";
 	height: 50px;
 	width: 50px;
-	background: url(../img/logo-icon.png);
+	background: url(../img/logo.png);
 	transform: translateX(-50%);
 	background-repeat: no-repeat;
 	background-position: center;

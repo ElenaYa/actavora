@@ -1,0 +1,6 @@
+/* Redirect to correct stylesheet */
+/* The main stylesheet is located at assets/css/style.css */
+/* This file exists only to prevent 404 errors */
+
+/* Import the main stylesheet */
+@import url('assets/css/style.css');
