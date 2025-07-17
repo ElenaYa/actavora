@@ -308,7 +308,7 @@
                             <p>
                                Entdecken Sie eine Plattform, die Ihnen hilft, komplexe Datenflüsse zu durchdringen und strategisch zu reagieren – objektiv, automatisiert und datengestützt.
                             </p>
-                            <a class="btn-style-two theme" href="contact-us.html">
+                            <a class="btn-style-two theme" href="#contact-form">
                                 <div class="icon">
                                     <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 17L17 1H7.8" stroke="white" stroke-width="2"></path>
@@ -827,138 +827,350 @@
             <!-- End Single Item -->
          
         </div>
-    </div>
-    <!-- End Event -->
-
-
-
-    <!-- Start Footer 
+         <!-- Start Contact Us 
     ============================================= -->
-    <footer class="footer-style-two bg-gray-gradient">
+    <div class="contact-style-one-area overflow-hidden default-padding-bottom default-padding-top">
         <div class="container">
-            <div class="footer-top">
-                <div class="row align-items-center">
-                    <div class="col-lg-5">
-                        <h2>Online Live Skill Development Platform</h2>
-                    </div>
-                    <div class="col-lg-7">
-                        <ul class="facilities-list">
-                            <li>
-                                <a href="#">
-                                    <div class="icon">
-                                        <img src="assets/img/icon/71.png" alt="Image Not Found">
-                                    </div> 
-                                    Live Class
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="icon">
-                                        <img src="assets/img/icon/72.png" alt="Image Not Found">
-                                    </div>  
-                                    Assignments
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="icon">
-                                        <img src="assets/img/icon/74.png" alt="Image Not Found">
-                                    </div>  
-                                    Comminity
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="icon">
-                                        <img src="assets/img/icon/75.png" alt="Image Not Found">
-                                    </div> 
-                                    Certificates
-                                </a>
-                            </li>
-                        </ul>
+            <div class="row">
+
+                <div class="contact-stye-one col-lg-10 offset-lg-1">
+                    <div class="contact-form-style-one" id="contact-form">
+                        <h2 class="heading">Senden Sie uns eine Nachricht</h2>
+                        <form id="contactForm" class="contact-form contact-form">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input class="form-control" id="name" name="name" placeholder="Vor- und Nachname" type="text">
+                                        <span class="alert-error" id="nameError"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input class="form-control" id="email" name="email" placeholder="E-Mail-Adresse*" type="email" required>
+                                        <span class="alert-error" id="emailError"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input class="form-control" id="phone" name="phone" placeholder="Telefonnummer" type="text">
+                                        <span class="alert-error" id="phoneError"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group comments">
+                                        <textarea class="form-control" id="comments" name="comments" placeholder="Ihre Nachricht an uns *" required></textarea>
+                                        <span class="alert-error" id="commentsError"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button type="submit" name="submit" id="submit">
+                                        <i class="fa fa-paper-plane"></i> Nachricht senden
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Alert Message -->
+                            <div class="col-lg-12 alert-notification">
+                                <div id="message" class="alert-msg"></div>
+                            </div>
+                        </form>
+                        <img src="assets/img/shape/88.png" alt="Image Not Found">
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- End Contact -->
+
+    <!-- Client-side Form Validation Script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+        const commentsInput = document.getElementById('comments');
+        const submitButton = document.getElementById('submit');
+        const messageDiv = document.getElementById('message');
+
+        // Error message elements
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const phoneError = document.getElementById('phoneError');
+        const commentsError = document.getElementById('commentsError');
+
+        // Clear previous error messages
+        function clearErrors() {
+            nameError.textContent = '';
+            emailError.textContent = '';
+            phoneError.textContent = '';
+            commentsError.textContent = '';
+            messageDiv.textContent = '';
+            
+            // Remove error styling
+            nameInput.classList.remove('is-invalid');
+            emailInput.classList.remove('is-invalid');
+            phoneInput.classList.remove('is-invalid');
+            commentsInput.classList.remove('is-invalid');
+        }
+
+        // Validate email format
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Validate phone number (basic validation)
+        function isValidPhone(phone) {
+            const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+            return phone === '' || phoneRegex.test(phone);
+        }
+
+        // Show error message
+        function showError(input, errorElement, message) {
+            input.classList.add('is-invalid');
+            errorElement.textContent = message;
+            errorElement.style.color = '#dc3545';
+            errorElement.style.fontSize = '14px';
+            errorElement.style.marginTop = '5px';
+        }
+
+        // Show success message
+        function showSuccess() {
+            messageDiv.innerHTML = '<div class="alert alert-success" style="background-color: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin-top: 15px;"><i class="fa fa-check-circle"></i> Nachricht wird gesendet...</div>';
+        }
+
+        // Form submission handler
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            clearErrors();
+            
+            let isValid = true;
+            
+            // Validate name (optional but if provided, must be at least 2 characters)
+            if (nameInput.value.trim() !== '' && nameInput.value.trim().length < 2) {
+                showError(nameInput, nameError, 'Der Name muss mindestens 2 Zeichen lang sein.');
+                isValid = false;
+            }
+            
+            // Validate email (required)
+            if (emailInput.value.trim() === '') {
+                showError(emailInput, emailError, 'E-Mail-Adresse ist erforderlich.');
+                isValid = false;
+            } else if (!isValidEmail(emailInput.value.trim())) {
+                showError(emailInput, emailError, 'Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+                isValid = false;
+            }
+            
+            // Validate phone (optional but if provided, must be valid format)
+            if (!isValidPhone(phoneInput.value.trim())) {
+                showError(phoneInput, phoneError, 'Bitte geben Sie eine gültige Telefonnummer ein.');
+                isValid = false;
+            }
+            
+            // Validate comments (required)
+            if (commentsInput.value.trim() === '') {
+                showError(commentsInput, commentsError, 'Nachricht ist erforderlich.');
+                isValid = false;
+            } else if (commentsInput.value.trim().length < 10) {
+                showError(commentsInput, commentsError, 'Die Nachricht muss mindestens 10 Zeichen lang sein.');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show success message
+                showSuccess();
+                
+                // Disable submit button temporarily
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Wird gesendet...';
+                
+                // Simulate form processing delay and redirect
+                setTimeout(function() {
+                    // Store form data in localStorage for potential future use
+                    const formData = {
+                        name: nameInput.value.trim(),
+                        email: emailInput.value.trim(),
+                        phone: phoneInput.value.trim(),
+                        comments: commentsInput.value.trim(),
+                        timestamp: new Date().toISOString()
+                    };
+                    
+                    localStorage.setItem('contactFormData', JSON.stringify(formData));
+                    
+                    // Redirect to thank you page
+                    window.location.href = 'thank-you.html';
+                }, 1500);
+            }
+        });
+
+        // Real-time validation
+        emailInput.addEventListener('blur', function() {
+            if (this.value.trim() !== '' && !isValidEmail(this.value.trim())) {
+                showError(this, emailError, 'Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+            } else {
+                emailError.textContent = '';
+                this.classList.remove('is-invalid');
+            }
+        });
+
+        phoneInput.addEventListener('blur', function() {
+            if (this.value.trim() !== '' && !isValidPhone(this.value.trim())) {
+                showError(this, phoneError, 'Bitte geben Sie eine gültige Telefonnummer ein.');
+            } else {
+                phoneError.textContent = '';
+                this.classList.remove('is-invalid');
+            }
+        });
+
+        commentsInput.addEventListener('blur', function() {
+            if (this.value.trim() !== '' && this.value.trim().length < 10) {
+                showError(this, commentsError, 'Die Nachricht muss mindestens 10 Zeichen lang sein.');
+            } else {
+                commentsError.textContent = '';
+                this.classList.remove('is-invalid');
+            }
+        });
+    });
+    </script>
+
+    <style>
+    .form-control.is-invalid {
+        border-color: #dc3545;
+        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    }
+    
+    .alert-error {
+        display: block;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    
+    .alert-success {
+        animation: slideDown 0.3s ease-out;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    </style>
+    </div>
+    <!-- End Event -->
+     
+
+
+ <!-- Start Footer 
+    ============================================= -->
+    <footer class="bg-dark footer-style-one text-light">
+       
         <div class="container">
             <div class="f-items default-padding">
                 <div class="row">
-                    
-                    <div class="col-lg-4 col-md-6 footer-item pr-60 pr-md-15 pr-xs-15">
+                    <div class="col-lg-4 col-md-6 footer-item pr-30 pr-md-15 pr-xs-15">
                         <div class="f-item about">
                             <div class="footer-logo">
-                                <img src="assets/img/logo.png" alt="Image Not Found">
+                                <img src="assets/img/logo-light.png" alt="Actavora">
                             </div>
                             <p>
-                                Unsere Plattform bietet keinen Zugang zu Finanzmärkten, führt keine Transaktionen durch und gibt keine Anlageempfehlungen ab. Wir sind keine Bank, kein Broker und keine lizenzierte Finanzberatungsstelle.
-Die bereitgestellten Informationen und Analysen dienen ausschließlich der allgemeinen Information und stellen keine Finanzberatung, keine Aufforderung zum Kauf oder Verkauf von Finanzprodukten und keine Empfehlung im Sinne der Schweizer Finanzmarktregulierung (z. B. FINMA) dar.
-Nutzerinnen und Nutzer treffen ihre Entscheidungen eigenverantwortlich. Actavora übernimmt keine Haftung für etwaige Verluste oder Entscheidungen, die auf Basis der generierten Auswertungen getroffen werden.
-
+                                Actavora ist ein Technologieanbieter und stellt eine browserbasierte Plattform zur Verfügung, die datenbasierte Entscheidungsprozesse mithilfe von künstlicher Intelligenz unterstützt.
                             </p>
                           
                         </div>
                     </div>
-
                     <div class="col-lg-2 col-md-6 footer-item">
                         <div class="f-item link">
-                            <h4 class="widget-title">Quick Link</h4>
+                            <h4 class="widget-title">Über uns</h4>
                             <ul>
                                 <li>
-                                    <a href="contact-us.html">Live Workshop</a>
+                                    <a href="about-us.html">Über Actavora</a>
                                 </li>
                                 <li>
-                                    <a href="course-filter.html">Free Courses</a>
+                                    <a href="team.html">Unser Team</a>
                                 </li>
                                 <li>
-                                    <a href="contact-us.html">Addmition</a>
+                                    <a href="blog.html">Blog & Insights</a>
                                 </li>
                                 <li>
-                                    <a href="contact-us.html">Request A Demo</a>
+                                    <a href="contact-us.html">Kontakt</a>
                                 </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-item">
+                        <div class="f-item link">
+                            <h4 class="widget-title">Rechtliches</h4>
+                            <ul>
+                                <li>
+                                    <a href="terms.html">Nutzungsbedingungen</a>
+                                </li>
+                                <li>
+                                    <a href="privacy-policy.html">Datenschutzerklärung</a>
+                                </li>
+                             
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 footer-item">
                         <div class="f-item newsletter">
-                            <h4 class="widget-title">Join Our Newsletter</h4>
-                            <p>
-                                Join our subscribers list to get the latest <br> news and special offers.
-                            </p>
-                            <form action="#">
-                                <input type="email" placeholder="Your Email" class="form-control" name="email">
-                                <button type="submit">Subscribe</button>  
-                            </form>
-                            <fieldset>
-                                <input type="checkbox" id="privacy" name="privacy">
-                                <label for="privacy">I agree to the Privacy Policy</label>
-                            </fieldset>
+                            <h4 class="widget-title">Kontakt</h4>
+                            <ul class="contact-list-two">
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h5><a href="tel:+41445005000">+41 44 500 5000</a></h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h5><a href="mailto:info@actavora.com">info@actavora.com</a></h5>
+                                    </div>
+                                </li>
+                            </ul>
+                           
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Start Footer Bottom -->
-            <div class="footer-bottom style-two">
+        </div>
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom style-one">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <p>&copy; Actavora AG. Actavora ist ein Technologieanbieter und stellt eine browserbasierte Plattform zur Verfügung, die datenbasierte Entscheidungsprozesse mithilfe von künstlicher Intelligenz unterstützt.</p>
-                    </div>
-                    <div class="col-lg-6 text-end">
-                        <ul class="link-list">
-                            <li>
-                                <a href="terms.html">Terms</a>
-                            </li>
-                            <li>
-                                <a href="privacy-policy.html">Privacy</a>
-                            </li>
-                          
-                        </ul>
+                    <div class="col-lg-12">
+                        <p style="font-size: 11px; color: #999; text-align: center; margin-bottom: 10px;">
+                           Unsere Plattform bietet keinen Zugang zu Finanzmärkten, führt keine Transaktionen durch und gibt keine Anlageempfehlungen ab. Wir sind keine Bank, kein Broker und keine lizenzierte Finanzberatungsstelle.
+                           Die bereitgestellten Informationen und Analysen dienen ausschließlich der allgemeinen Information und stellen keine Finanzberatung, keine Aufforderung zum Kauf oder Verkauf von Finanzprodukten und keine Empfehlung im Sinne der Schweizer Finanzmarktregulierung (z. B. FINMA) dar.
+                        </p>
+                        <p style="font-size: 11px; color: #999; text-align: center;">
+                         Nutzerinnen und Nutzer treffen ihre Entscheidungen eigenverantwortlich. Actavora übernimmt keine Haftung für etwaige Verluste oder Entscheidungen, die auf Basis der generierten Auswertungen getroffen werden.
+                        </p>
+                         <p style="margin-top: 20px; font-size: 12px; color: #999;text-align: center;">
+                                © Actavora AG<br>
+                                Kantstrasse 17, 8044 Zürich, Schweiz
+                            </p>
                     </div>
                 </div>
             </div>
-            <!-- End Footer Bottom -->
         </div>
-    </footer>
-    <!-- End Footer -->
+        <!-- End Footer Bottom -->
     
     <!-- jQuery Frameworks
     ============================================= -->
