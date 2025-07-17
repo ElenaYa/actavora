@@ -9070,7 +9070,7 @@ a.round-text img {
 	height: 100%;
 	position: relative;
 	z-index: 1;
-	padding: 0 50px;
+	
 	margin-left: -120px;
 }
 
@@ -9080,16 +9080,7 @@ a.round-text img {
 	margin-bottom: 10px;
 }
 
-.advantages-info::after {
-	position: absolute;
-	left: 0;
-	top: -500px;
-	bottom: -500px;
-	width: 100%;
-	background: var(--color-primary);
-	content: "";
-	z-index: -1;
-}
+
 
 .theme-skyblue .advantages-info::after {
 	background: var(--color-style-three);
