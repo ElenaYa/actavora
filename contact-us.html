@@ -289,6 +289,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <input type="hidden" id="gclid" name="gclid" value="">
+                            <input type="hidden" id="gclid_timestamp" name="gclid_timestamp" value="">
+                            <input type="hidden" id="form_source" name="form_source" value="contact_page_form">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <button type="submit" name="submit" id="submit">
@@ -556,6 +559,23 @@
         const phoneError = document.getElementById('phoneError');
         const commentsError = document.getElementById('commentsError');
 
+        function getGCLID() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('gclid') || '';
+        }
+
+        const gclid = getGCLID();
+        if (gclid) {
+            localStorage.setItem('actavora_gclid', gclid);
+            localStorage.setItem('actavora_gclid_timestamp', new Date().toISOString());
+        }
+
+        const storedGclid = localStorage.getItem('actavora_gclid') || '';
+        const storedTimestamp = localStorage.getItem('actavora_gclid_timestamp') || '';
+        
+        document.getElementById('gclid').value = storedGclid;
+        document.getElementById('gclid_timestamp').value = storedTimestamp;
+
         function clearErrors() {
             nameError.textContent = '';
             emailError.textContent = '';
@@ -631,8 +651,17 @@
                 submitButton.disabled = true;
                 submitButton.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Wird gesendet...';
                 
+                const currentGclid = localStorage.getItem('actavora_gclid') || '';
+                const currentTimestamp = localStorage.getItem('actavora_gclid_timestamp') || '';
+                
+                document.getElementById('gclid').value = currentGclid;
+                document.getElementById('gclid_timestamp').value = currentTimestamp;
+                
                 setTimeout(function() {
                    
+                    const storedGclid = localStorage.getItem('actavora_gclid') || '';
+                    const gclid_timestamp = localStorage.getItem('actavora_gclid_timestamp') || '';
+
                     const formData = {
                         name: nameInput.value.trim(),
                         email: emailInput.value.trim(),
@@ -640,10 +669,15 @@
                         phone: phoneInput.value.trim(),
                         fullPhone: countryCodeSelect.value + ' ' + phoneInput.value.trim(),
                         comments: commentsInput.value.trim(),
-                        timestamp: new Date().toISOString()
+                        gclid: storedGclid,
+                        gclid_timestamp: gclid_timestamp,
+                        timestamp: new Date().toISOString(),
+                        source: 'contact_page_form'
                     };
                     
                     localStorage.setItem('contactFormData', JSON.stringify(formData));
+                    
+                  
                     
                     window.location.href = 'thank-you.html';
                 }, 1500);
