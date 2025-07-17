@@ -1,11 +1,4 @@
-/* ----------------------------------
 
-Template Name: Validnavs - Multipurpose Navbar Menu
-Author: validtheme
-Description:
-Version: 1.0
-
-------------------------------------- */
 
 
 :root {
@@ -16,7 +9,6 @@ Version: 1.0
 }
 
 
-/* Default for supporting bootstrap */
 
 
 @media (min-width: 768px) {

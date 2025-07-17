@@ -1,111 +1,8 @@
-/* ----------------------------------
 
-Template Name: Learna - Education HTML Template
-Author: validtheme
-Description:
-Version: 1.0
-
-Main Font    : Outfit
-Main Color   : #008CFF
-
--------------------------------------
-
-[Typography]
-
-Body copy:    15px 'Outfit', sans-serif
-Header:     36px 'Outfit', sans-serif
-Input, textarea:  15px 'Outfit', sans-serif
-Sidebar heading:  20px 'Outfit', sans-serif
-
->>> TABLE OF CONTENTS:
-=======================
-        
-    01. Template default css
-        - Animations
-        - General
-        - Section Title
-        - Video Button
-        - Typography
-        - Tables
-        - Forms
-        - Buttons
-        - Pagination
-        - Colors
-        - Accordion
-        - Tabs
-    02. Preloader
-    03. Topbar
-    04 Navbar
-        - Navbar Default
-        - Navbar Transparent
-        - Navbar Sticky
-        - Navbar Box
-    05. Banner
-        - Banner Style One
-        - Banner Style Two
-        - Banner Style Three
-        - Banner Style Four
-        - Banner Style Five
-        - Banner Style Six
-        - Banner Style Seven
-        - Banner Style Eight
-    06. About Us
-        - Version One
-        - Version Two
-        - Version Three
-        - Version Four
-    07. Category
-        - Version One
-        - Version Two
-        - Version Three
-    08. Courses
-        - Version One
-        - Version Two
-        - Version Three
-        - Version Four
-        - Version Five
-        - Version Six
-        - Course Single
-    09. Gallery
-    10. Advisor
-        - Version One
-        - Version Two
-        - Advisor Details
-    11. Event
-        - Version One
-        - Version Two
-        - Version Three
-        - Version Four
-        - Event Details
-    12. Zoom Meeting
-        - Version One
-        - Zoom Meeting Details
-    13. Testimonials
-        - Version One
-        - Version Two
-        - Version Three
-    14. Why Choose Us
-    15. Privacy Policy
-    16. Fun Factor
-    17. FAQ
-    18. Login
-    19. Register
-    20. Blog
-        - Standard
-        - Left Sidebar
-        - Right Sidebar
-        - Single
-    21. Error 404
-    22. Footer
-    23. PHP Contact Form
-    24. Others
-
-*/
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 
-/* Varialbes */
 :root {
 	--font-default: 'Outfit', sans-serif;
 	--font-heading: 'Outfit', sans-serif;
@@ -134,9 +31,7 @@ Sidebar heading:  20px 'Outfit', sans-serif
 
 
 
-/* ============================================================== 
-     # Reset Browsers
-=================================================================== */
+
 
 * {
 	-webkit-box-sizing: border-box;
@@ -299,9 +194,7 @@ i::before {
 }
 
 
-/* ============================================================== 
-    # Template Default Styles
-=================================================================== */
+
 
 body {
 	font-family: var(--font-default);
@@ -369,9 +262,7 @@ p {
 
 
 
-/* ============================================================== 
-    # Helper CSS
-=================================================================== */
+
 
 .container-full {
 	padding: 0 15px;
@@ -939,9 +830,7 @@ p {
 	border-color: #3b585c;
 }
 
-/* ============================================================== 
-    # Video Play Button 
-=================================================================== */
+
 .video-play-button {
 	display: inline-block;
 	position: relative;
@@ -1015,11 +904,7 @@ p {
 
 
 
-/* ============================================================== 
-    # Template Animation
-=================================================================== */
 
-/* Video Paly */
 @-webkit-keyframes video-play {
 	0% {
 		-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
@@ -1488,9 +1373,7 @@ p {
 	}
 }
 
-/* ============================================================== 
-    # Button Styles
-=================================================================== */
+
 .btn {
 	display: inline-block;
 	font-weight: 500;
@@ -2597,9 +2480,7 @@ button {
 	transform: translateY(-45%) skew(25deg) scale(1.2);
 }
 
-/* ============================================================== 
-    # Nice Select Styles
-=================================================================== */
+
 .nice-select {
 	-webkit-tap-highlight-color: transparent;
 	background-color: var(--white);
@@ -2802,9 +2683,7 @@ button {
 	display: none;
 }
 
-/* ============================================================== 
-    # Topbar Styles
-=================================================================== */
+
 
 .top-bar-area ul {
 	margin: 0;
@@ -3091,9 +2970,7 @@ button {
 }
 
 
-/* ============================================================== 
-    # Banner Styles
-=================================================================== */
+
 .banner-area {
 	width: 100%;
 	position: relative;
@@ -3646,13 +3523,9 @@ button {
 	font-weight: 600;
 }
 
-/* ============================================================== 
-    # Banner Custom Style
-=================================================================== */
 
 
 
-/* Banner Style One */
 .banner-style-one-area {
 	padding-top: 160px;
 	padding-bottom: 120px;
@@ -3866,7 +3739,6 @@ button {
 	width: 100px;
 }
 
-/* Banner Style Two */
 .banner-style-two-area {
 	padding-top: 300px;
 	position: relative;
@@ -5375,18 +5247,13 @@ ul.list-style-two li:first-child {
 }
 
 
-/* ============================================================== 
-    # Brand One
-=================================================================== */
+
 .brand-style-one-area {
 	text-align: center;
 }
 
 
 
-/* ============================================================== 
-    # Crouse Style One
-=================================================================== */
 .course-style-one-item {
 	background: var(--white);
 	box-shadow: 0px -4px 50px -14px rgb(109 117 143 / 53%);
@@ -5762,9 +5629,6 @@ ul.list-style-two li:first-child {
 }
 
 
-/* ============================================================== 
-    # Course Filter
-=================================================================== */
 
 .course-listing-contentes .content {
 	display: flex;
@@ -6146,9 +6010,7 @@ nav.woocommerce-pagination {
 	color: #ffffff;
 }
 
-/* ============================================================== 
-    # Course Carousel
-=================================================================== */
+
 
 .course-style-two-carousel-area {
 	overflow: hidden;
@@ -6307,9 +6169,7 @@ nav.woocommerce-pagination {
 }
 
 
-/* ============================================================== 
-    # Course Tabs
-=================================================================== */
+
 .nav.nav-tabs.category-tabs {
 	background: var(--white);
 	padding: 50px;
@@ -6382,9 +6242,6 @@ nav.woocommerce-pagination {
 	margin-bottom: 0;
 }
 
-/* ============================================================== 
-    # Course Carousel
-=================================================================== */
 
 .course-two-swiper-nav {
 	position: relative;
@@ -6505,9 +6362,7 @@ a.btn-regular:hover {
 }
 
 
-/* ============================================================== 
-    # Course Filter
-=================================================================== */
+
 ul.vt-products {
 	padding: 0;
 	list-style: none;
@@ -6585,9 +6440,6 @@ ul.vt-products {
 	}
 }
 
-/* ============================================================== 
-    # Course Details
-=================================================================== */
 
 .course-preview-info .thumb {
 	position: relative;
@@ -7419,9 +7271,6 @@ ul.curriculum-list li .right-content i {
 }
 
 
-/* ============================================================== 
-    # Course Details Two
-=================================================================== */
 .course-details-two::after {
 	display: none;
 }
@@ -7501,9 +7350,6 @@ ul.curriculum-list li .right-content i {
 }
 
 
-/* ============================================================== 
-    # Related Course Carousel
-=================================================================== */
 .related-course-carousel {
 	margin: -15px;
 }
@@ -7518,9 +7364,6 @@ ul.curriculum-list li .right-content i {
 
 
 
-/* ============================================================== 
-    # Course Category
-=================================================================== */
 
 .category-style-one-area {
 	overflow: hidden;
@@ -7568,9 +7411,7 @@ ul.curriculum-list li .right-content i {
 	border-color: #FF922E;
 }
 
-/* ============================================================== 
-    # Category Style Two 
-=================================================================== */
+
 .category-style-two-item a {
 	border: 1px solid #dddddd;
 	overflow: hidden;
@@ -7665,9 +7506,6 @@ ul.curriculum-list li .right-content i {
 	transform: scale(1.07);
 }
 
-/* ============================================================== 
-    # Category Style Three 
-=================================================================== */
 
 .category-style-three-area {
 	position: relative;
@@ -7814,9 +7652,6 @@ ul.curriculum-list li .right-content i {
 	color: var(--color-heading);
 }
 
-/* ============================================================== 
-    # Brand
-=================================================================== */
 
 .brand-items {
 	position: relative;
@@ -7909,9 +7744,7 @@ ul.curriculum-list li .right-content i {
 }
 
 
-/* ============================================================== 
-    # About 
-=================================================================== */
+
 .thumb-style-two {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -8253,9 +8086,6 @@ ul.curriculum-list li .right-content i {
 	position: relative;
 }
 
-/* ============================================================== 
-    # About Style Three
-=================================================================== */
 .about-style-three-thumb {
 	height: 100%;
 	position: relative;
@@ -8342,9 +8172,6 @@ ul.list-style-four li p {
 	margin: 0;
 }
 
-/* ============================================================== 
-    # Profile
-=================================================================== */
 .instructor-profile-cover {
 	background: var(--dark);
 	border-radius: 10px;
@@ -8527,9 +8354,6 @@ ul.list-style-four li p {
 }
 
 
-/* ============================================================== 
-    # About
-=================================================================== */
 .about-style-four-info .bottom-info {
 	display: grid;
 	grid-template-columns: 1fr 1.4fr;
@@ -8576,9 +8400,6 @@ ul.list-style-four li p {
 	animation: UpDown 5s linear infinite;
 }
 
-/* ============================================================== 
-    # About Style Five
-=================================================================== */
 .about-style-five-area {
 	position: relative;
 	z-index: 1;
@@ -8657,9 +8478,7 @@ a.round-text img {
 	animation: spinner 20s infinite linear;
 }
 
-/* ============================================================== 
-    # About Style Five
-=================================================================== */
+
 .about-style-six-thumb {
 	position: absolute;
 	left: 0;
@@ -8703,9 +8522,7 @@ a.round-text img {
 	margin: 0;
 }
 
-/* ============================================================== 
-    # About Style Seven
-=================================================================== */
+
 .about-style-seven-items {
 	background: var(--white);
 	padding: 80px;
@@ -8824,9 +8641,6 @@ a.round-text img {
 	animation: fadeLeftRight 15s linear infinite;
 }
 
-/* ============================================================== 
-    # Child Program
-=================================================================== */
 
 .child-program-area .shape-bottom {
 	position: absolute;
@@ -8985,9 +8799,6 @@ a.round-text img {
 	margin-top: 80px;
 }
 
-/* ============================================================== 
-    # Session Time
-=================================================================== */
 .session-time-items {
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -9039,9 +8850,7 @@ a.round-text img {
 	margin-bottom: 40px;
 }
 
-/* ============================================================== 
-    # Our Advantages
-=================================================================== */
+
 
 .fun-fact-style-three-items {
 	display: grid;
@@ -9087,9 +8896,6 @@ a.round-text img {
 }
 
 
-/* ============================================================== 
-    # Why Choose Us
-=================================================================== */
 .grid-style-one-items {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -9244,9 +9050,7 @@ a.round-text img {
 	bottom: -15px;
 }
 
-/* ============================================================== 
-    # Choose Us Style Two
-=================================================================== */
+
 .nav.nav-tabs.tab-style-two-nav {
 	margin: 0;
 	border: none;
@@ -9378,9 +9182,7 @@ a.round-text img {
 	font-weight: 900;
 }
 
-/* ============================================================== 
-    # Choose Us Style Three
-=================================================================== */
+
 
 .choose-us-style-three-area .shape {
 	position: absolute;
@@ -9440,9 +9242,7 @@ a.round-text img {
 }
 
 
-/* ============================================================== 
-    # Feature Style Two
-=================================================================== */
+
 .experience-card-two .counter {
 	font-size: 90px;
 	line-height: 1;
@@ -9546,9 +9346,7 @@ a.round-text img {
 	max-width: 25%;
 }
 
-/* ============================================================== 
-    # Certificate
-=================================================================== */
+
 
 .certificate-area {
 	overflow: hidden;
@@ -9638,9 +9436,7 @@ a.round-text img {
 	margin-top: 15px;
 }
 
-/* ============================================================== 
-    # Live Course
-=================================================================== */
+
 
 .live-course-area {
 	background-size: 50%;
@@ -9808,9 +9604,7 @@ a.round-text img {
 }
 
 
-/* ============================================================== 
-    # Advisor
-=================================================================== */
+
 
 .advisor-style-one-area {
 	overflow: hidden;
@@ -10046,9 +9840,7 @@ a.round-text img {
 	width: 150px;
 }
 
-/* ============================================================== 
-    # Advisor Style Two
-=================================================================== */
+
 
 .advisor-style-two-item {
 	overflow: hidden;
@@ -10132,9 +9924,6 @@ a.round-text img {
 	width: 25%;
 }
 
-/* ============================================================== 
-    # Advisor Style Three
-=================================================================== */
 
 .advisor-style-three-area {
 	position: relative;
@@ -10255,9 +10044,7 @@ a.round-text img {
 	color: var(--white);
 }
 
-/* ============================================================== 
-    # Event
-=================================================================== */
+
 .event-style-one-item {
 	position: relative;
 	z-index: 1;
@@ -10409,9 +10196,7 @@ a.round-text img {
 	margin-bottom: 20px;
 }
 
-/* ============================================================== 
-    # Event
-=================================================================== */
+
 .event-style-two-items {
 	position: relative;
 	z-index: 1;
@@ -10521,9 +10306,7 @@ a.round-text img {
 	margin: 0;
 }
 
-/* ============================================================== 
-    # Event Style Three
-=================================================================== */
+
 
 .event-style-three-area {
 	position: relative;
@@ -10590,9 +10373,6 @@ a.round-text img {
 	row-gap: 5px;
 }
 
-/* ============================================================== 
-    # Event Style Four
-=================================================================== */
 .event-style-four-item {
 	background-size: cover;
 	position: relative;
@@ -10721,9 +10501,7 @@ a.round-text img {
 .theme-style-three .event-style-four-item:hover .button .btn:hover::after {
 	background: var(--color-style-five);
 }
-/* ============================================================== 
-    # Event Single
-=================================================================== */
+
 .event-details-info .nav.nav-tabs.course-details-navs {
 	border-radius: 50px;
 }
@@ -10948,9 +10726,7 @@ ul.event-location li a:hover {
 	color: var(--color-primary);
 }
 
-/* ============================================================== 
-    # Testimonil
-=================================================================== */
+
 .testimonial-style-one-items {
 	padding: 80px;
 	display: flex;
@@ -11090,9 +10866,6 @@ ul.event-location li a:hover {
 }
 
 
-/* ============================================================== 
-    # Testimonial Style Two
-=================================================================== */
 
 .testimonial-style-two-area {
 	overflow: hidden;
@@ -11224,9 +10997,7 @@ ul.event-location li a:hover {
 	z-index: 2;
 }
 
-/* ============================================================== 
-    # Testimonial Style Three
-=================================================================== */
+
 
 .testimonial-style-three-area {
 	overflow: hidden;
@@ -11358,9 +11129,7 @@ ul.event-location li a:hover {
 	margin-right: -25px;
 }
 
-/* ============================================================== 
-    # Testimonial Style Four
-=================================================================== */
+
 
 .thumb-style-five {
 	text-align: center;
@@ -11485,9 +11254,7 @@ ul.event-location li a:hover {
 	font-size: 20px;
 }
 
-/* ============================================================== 
-    # Testimonial Style Five
-=================================================================== */
+
 .testimonial-style-five-items {
 	position: relative;
 	padding: 90px;
@@ -11547,9 +11314,7 @@ ul.event-location li a:hover {
 	font-size: 15px;
 }
 
-/* ============================================================== 
-    # Newsletter
-=================================================================== */
+
 .newsletter-style-one-items {
 	padding: 80px;
 	border-radius: 10px;
@@ -11638,9 +11403,7 @@ ul.list-check li::after {
 	opacity: 0.45;
 }
 
-/* ============================================================== 
-    # Feature
-=================================================================== */
+
 
 .feature-style-one-items {
 	border-top: 1px solid #e7e7e7;
@@ -11738,9 +11501,6 @@ ul.list-style-three li::before {
 }
 
 
-/* ============================================================== 
-    # Fun Fact
-=================================================================== */
 
 .fun-fact-style-one-area.bg-contain {
 	background-position: right bottom !important;
@@ -11791,9 +11551,6 @@ ul.list-style-three li::before {
 }
 
 
-/* ============================================================== 
-    # Join With Us
-=================================================================== */
 
 .join-us-style-one-item {
 	display: grid;
@@ -11909,9 +11666,6 @@ ul.list-style-three li::before {
 }
 
 
-/* ============================================================== 
-    # Join Us Style Two
-=================================================================== */
 .thumb-style-four {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -12054,9 +11808,6 @@ ul.list-style-six li::after {
 	background-size: contain;
 }
 
-/* ============================================================== 
-    # Pricing
-=================================================================== */
 .pricing-style-one-item {
 	display: grid;
 	align-items: center;
@@ -12260,9 +12011,7 @@ ul.list-style-six li::after {
 	padding: 12px 35px;
 }
 
-/* ============================================================== 
-    # Gallery
-=================================================================== */
+
 
 .mfp-container button {
 	background: transparent !important;
@@ -12399,9 +12148,6 @@ button.mfp-arrow.mfp-prevent-close::after {
 	background-size: cover;
 }
 
-/* ============================================================== 
-    # Faq
-=================================================================== */
 
 .faq-style-one-area {
 	background-size: 10%;
@@ -12511,9 +12257,6 @@ button.mfp-arrow.mfp-prevent-close::after {
 }
 
 
-/* ============================================================== 
-    # Campuse Life
-=================================================================== */
 .accordion-item.faq-style-two {
 	border: none;
 	background: transparent;
@@ -12596,9 +12339,6 @@ button.mfp-arrow.mfp-prevent-close::after {
 	border-radius: 10px;
 }
 
-/* ============================================================== 
-    # Faculty
-=================================================================== */
 .faculty-style-one-item {
 	border-radius: 10px;
 	padding: 15px;
@@ -12644,9 +12384,7 @@ ul.faculty-list li {
 	font-size: 24px;
 }
 
-/* ============================================================== 
-    # Tutiona Fee
-=================================================================== */
+
 .tution-fees-items {
 	display: grid;
 	grid-template-columns: 1fr 1.2fr;
@@ -12806,9 +12544,7 @@ ul.faculty-list li {
 }
 
 
-/* ============================================================== 
-    # Admission Form
-=================================================================== */
+
 .admission-form-style-one {
 	padding: 80px;
 	border: 1px solid #e7e7e7;
@@ -12907,9 +12643,7 @@ ul.faculty-list li {
 	margin-bottom: 30px;
 }
 
-/* ============================================================== 
-    # Contact
-=================================================================== */
+
 .contact-form-style-one {
 	padding: 80px;
 	background: var(--white);
@@ -13023,9 +12757,7 @@ ul.faculty-list li {
 }
 
 
-/* ============================================================== 
-    # Home Blog
-=================================================================== */
+
 
 .home-blog-style-one-item {
 	display: grid;
@@ -13096,9 +12828,7 @@ ul.faculty-list li {
 }
 
 
-/* ============================================================== 
-    # Activiries
-=================================================================== */
+
 .activities-style-one {
 	background: var(--color-style-three);
 	padding: 60px 40px;
@@ -13191,9 +12921,6 @@ ul.faculty-list li {
 	background: #2ECA7F;
 }
 
-/* ============================================================== 
-    # Zoom Meeting
-=================================================================== */
 .meeting-style-one-item {
 	overflow: hidden;
 	border-radius: 10px;
@@ -13333,9 +13060,7 @@ ul.faculty-list li {
 	bottom: 3px;
 }
 
-/* ============================================================== 
-    # Form Style Two
-=================================================================== */
+
 .form-style-two-items {
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -13379,9 +13104,7 @@ form.form-style-two .nice-select::after {
 	margin-top: -2px;
 }
 
-/* ============================================================== 
-    # Home Blog Two
-=================================================================== */
+
 .home-blog-style-two-item .info {
 	position: relative;
 	z-index: 1;
@@ -13706,9 +13429,7 @@ a.btn-read-more:hover {
 }
 
 
-/* ============================================================== 
-    # Login Register
-=================================================================== */
+
 .login-register-area, .login-register-area div {
 	height: 100%;
 }
@@ -13841,9 +13562,7 @@ a.btn-read-more:hover {
 	background: var(--white);
 }
 
-/* ============================================================== 
-    # 404 page
-=================================================================== */
+
 
 .error-page-area {
 	position: relative;
@@ -13901,9 +13620,6 @@ a.btn-read-more:hover {
 	}
 }
 
-/* ============================================================== 
-    # Footer
-=================================================================== */
 
 @media (min-width: 1200px) {
 	footer.footer-default {
@@ -14493,7 +14209,6 @@ footer.dark-optional .footer-bottom p {
 	color: var(--white);
 }
 
-/* Pages */
 .privacy-pages ul {
 	padding-left: 30px;
 }
@@ -14506,9 +14221,7 @@ footer.dark-optional .footer-bottom p {
 	line-height: 1.8;
 }
 
-/* ============================================================== 
-    # Responsive CSS
-=================================================================== */
+
 
 @media screen and (max-width: 1399px) {
 

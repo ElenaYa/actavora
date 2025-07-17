@@ -59,14 +59,11 @@
                 }
             }
         }
-        //loopcounter( 'counter-id' );
     });
-})(jQuery); // End jQuery
+})(jQuery); 
 
 
-/* ==================================================
-    Countdown Init
- ===============================================*/
+
 
  (function($) {
     "use strict";
@@ -77,6 +74,6 @@
             loopcounter('counter-class');
         }
 
-    }); // end document ready function
+    });
     
-})(jQuery); // End jQuery
+})(jQuery);

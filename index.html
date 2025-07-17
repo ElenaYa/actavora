@@ -742,7 +742,21 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input class="form-control" id="phone" name="phone" placeholder="Telefonnummer" type="text">
+                                        <div class="phone-input-container" style="display: flex; gap: 10px;">
+                                            <select class="form-control" id="countryCode" name="countryCode" style="flex: 0 0 120px;">
+                                                <option value="+41" selected>🇨🇭 +41</option>
+                                                <option value="+49">🇩🇪 +49</option>
+                                                <option value="+43">🇦🇹 +43</option>
+                                                <option value="+33">🇫🇷 +33</option>
+                                                <option value="+39">🇮🇹 +39</option>
+                                                <option value="+31">🇳🇱 +31</option>
+                                                <option value="+32">🇧🇪 +32</option>
+                                                <option value="+44">🇬🇧 +44</option>
+                                                <option value="+1">🇺🇸 +1</option>
+                                                <option value="+1">🇨🇦 +1</option>
+                                            </select>
+                                            <input class="form-control" id="phone" name="phone" placeholder="123 456 7890" type="tel" style="flex: 1;">
+                                        </div>
                                         <span class="alert-error" id="phoneError"></span>
                                     </div>
                                 </div>
@@ -779,6 +793,7 @@
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
         const phoneInput = document.getElementById('phone');
+        const countryCodeSelect = document.getElementById('countryCode');
         const commentsInput = document.getElementById('comments');
         const submitButton = document.getElementById('submit');
         const messageDiv = document.getElementById('message');
@@ -870,7 +885,9 @@
                     const formData = {
                         name: nameInput.value.trim(),
                         email: emailInput.value.trim(),
+                        countryCode: countryCodeSelect.value,
                         phone: phoneInput.value.trim(),
+                        fullPhone: countryCodeSelect.value + ' ' + phoneInput.value.trim(),
                         comments: commentsInput.value.trim(),
                         timestamp: new Date().toISOString()
                     };
